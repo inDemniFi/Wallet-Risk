@@ -6,7 +6,7 @@ interface IProps {
   session: IWeb3Session;
 }
 
-export const Web3ConnectionRow: React.FC<IProps> = ({ session }) => {
+const Web3ConnectionRow: React.FC<IProps> = ({ session }) => {
   const { removeWeb3Connection } = useAppStore();
   const isMountedRef = React.useRef<boolean>(false);
   const [inProgress, setInProgress] = React.useState<boolean>(false);
@@ -48,3 +48,5 @@ export const Web3ConnectionRow: React.FC<IProps> = ({ session }) => {
     </tr>
   );
 };
+
+export default Web3ConnectionRow;
