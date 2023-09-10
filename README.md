@@ -4,6 +4,8 @@
 
 Our codebase in this repository is deployed as a Github page and can be viewed [here](https://indemnifi.github.io/Wallet-Risk) or here: https://indemnifi.github.io/Wallet-Risk
 
+Wallet risks range from assets idle in your wallet, during the course of a transaction, and while deployed in defi, so we will quantify those risks in a dashboard that not only educates the user but also provides data insights on proactive actionable risk mitigation. From phishing websites to honeypots to open token approvals, risks vary though we will provide clarity and actionable insight for our future wallet users. 
+
 ## dApp Stack
 
 - [Github Pages](https://indemnifi.github.io/Wallet-Risk)
