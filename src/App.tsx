@@ -14,7 +14,6 @@ export const App: React.FC = () => {
         <div className="p-4 flex-1 overflow-auto bg-gray-400">
           <div className="flex flex-col gap-4 m-auto max-w-[970px]">
             <Auth0Login>
-              <AssetBalances /> {/* Add the AssetBalances component */}
               <AppContent />
             </Auth0Login>
           </div>
