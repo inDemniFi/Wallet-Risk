@@ -1,7 +1,7 @@
 import React from "react";
 import { useAppStore } from "../AppStore";
 import { Card, ICardAction } from "./ui/Card";
-import { Web3ConnectionRow } from "./Web3ConnectionRow";
+
 
 export const Web3: React.FC = () => {
   const {
