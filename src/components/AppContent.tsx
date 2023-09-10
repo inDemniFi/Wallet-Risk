@@ -6,8 +6,8 @@ import { FireblocksNCWInitializer } from "./FireblocksNCWInitializer";
 import { LoginToDemoAppServer } from "./LoginToDemoAppServer";
 import { useAuth0AccessToken } from "../auth/auth0AccessTokenHook";
 import { FireblockNCWExampleActions } from "./FireblockNCWExampleActions";
-import { AssetList } from "./AssetList";
-import { AssetBalance } from "./AssetBalance";
+import AssetList from "./AssetList";
+import AssetBalance from "./AssetBalance";
 
 export const AppContent: React.FC = () => {
   const token = useAuth0AccessToken();
