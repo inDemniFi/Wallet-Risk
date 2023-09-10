@@ -1,53 +1,45 @@
-import React from "react";
-import { useAppStore } from "../AppStore";
-import { Card, ICardAction } from "./ui/Card";
-import { assetBalancesConfig } from "./assetBalancesConfig.tsx";
+import React, { useEffect, useState } from 'react';
+import { useAppStore } from '../AppStore'; // Import your AppStore or context as needed
+import { assetBalancesConfig } from './assetBalancesConfig'; // Import your asset balances configuration
 
-interface AssetBalancesProps {
-  deviceId: string;
-  accountId: string;
-}
+// Define the AssetBalances component
+export const AssetBalances: React.FC = () => {
+  const {
+    // Replace with your necessary store functions and state
+    getAssetBalances,
+    assetBalances,
+  } = useAppStore(); // Import the necessary functions and state from your store
 
-const AssetBalances: React.FC<AssetBalancesProps> = ({ deviceId, accountId }) => {
-  const [assetBalances, setAssetBalances] = useState<{ [assetId: string]: number }>({});
+  const [isLoading, setIsLoading] = useState<boolean>(false);
 
   useEffect(() => {
-    const apiService = new ApiService("your_base_url", "your_token"); // Replace with your actual base URL and token
-    const fetchTransactions = async () => {
+    async function fetchData() {
+      setIsLoading(true);
       try {
-        const response = await apiService.getTransactions(deviceId, accountId); // Replace with the actual API call to fetch transactions
-        const transactions: ITransactionDetails[] = await response.json();
-
-        // Calculate the netAmount for each asset and update the balances
-        const balances: { [assetId: string]: number } = {};
-        transactions.forEach((transaction) => {
-          const { assetId, netAmount } = transaction;
-          if (assetId && netAmount !== undefined) {
-            balances[assetId] = (balances[assetId] || 0) + netAmount;
-          }
-        });
-
-        setAssetBalances(balances);
-      } catch (error) {
-        console.error("Error fetching transactions:", error);
+        await getAssetBalances();
+      } finally {
+        setIsLoading(false);
       }
-    };
+    }
 
-    fetchTransactions();
-  }, [deviceId, accountId]);
+    fetchData();
+  }, [getAssetBalances]);
 
   return (
     <div>
       <h2>Asset Balances</h2>
-      <ul>
-        {Object.entries(assetBalances).map(([assetId, balance]) => (
-          <li key={assetId}>
-            {assetId}: {balance} {assetId}
-          </li>
-        ))}
-      </ul>
+      {isLoading ? (
+        <p>Loading asset balances...</p>
+      ) : (
+        <ul>
+          {assetBalances.map((balance) => (
+            <li key={balance.id}>
+              {balance.assetName}: {balance.balance}
+            </li>
+          ))}
+        </ul>
+      )}
+      {/* Render asset balances here using your configuration */}
     </div>
   );
 };
-
-export default AssetBalances;
