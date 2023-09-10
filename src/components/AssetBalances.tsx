@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { ApiService, ITransactionDetails } from "./ApiService"; // Import your ApiService and ITransactionDetails
+import { ApiService, ITransactionDetails } from "./ApiService";
+import { assetBalancesConfig } from "./assetBalancesConfig.tsx";
 
 interface AssetBalancesProps {
   deviceId: string;
