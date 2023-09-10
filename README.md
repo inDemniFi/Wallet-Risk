@@ -13,4 +13,4 @@ Wallet risks range from assets idle in your wallet, during the course of a trans
 - [Typescript](https://www.npmjs.com/package/typescript)
 - [Vite](https://www.npmjs.com/package/vite)
 - [React](https://www.npmjs.com/package/react)
-- 
+
