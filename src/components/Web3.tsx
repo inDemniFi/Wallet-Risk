@@ -88,7 +88,7 @@ export const Web3: React.FC = () => {
             </thead>
             <tbody>
               {web3Connections.map((session) => (
-                <Web3Connections key={session.id} session={session} />
+                <web3Connections key={session.id} session={session} />
               ))}
             </tbody>
           </table>
