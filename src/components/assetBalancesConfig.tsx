@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from "react";
-import AssetBalances from "./assetBalances"; // Import the AssetBalances component
+import React from "react";
+import { useAppStore } from "../AppStore";
+import { IWeb3Session } from "../services/ApiService";
 
 export interface AssetBalancesConfigProps {
   deviceId: string;
