@@ -4,6 +4,7 @@ import { Auth0Login } from "./auth/Auth0Login";
 import { auth0ProviderConfig } from "./auth/auth0ProviderConfig";
 import { AppContent } from "./components/AppContent";
 import { NavBar } from "./components/ui/NavBar";
+import { AssetBalances } from './components/AssetBalances'; // Import the AssetBalances component
 
 export const App: React.FC = () => {
   return (
@@ -13,6 +14,7 @@ export const App: React.FC = () => {
         <div className="p-4 flex-1 overflow-auto bg-gray-400">
           <div className="flex flex-col gap-4 m-auto max-w-[970px]">
             <Auth0Login>
+              <AssetBalances /> {/* Add the AssetBalances component */}
               <AppContent />
             </Auth0Login>
           </div>
