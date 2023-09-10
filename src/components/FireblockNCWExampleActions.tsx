@@ -5,7 +5,6 @@ import { GenerateMPCKeys } from "./GenerateMPCKeys";
 import { Takeover } from "./Takeover";
 import { Transactions } from "./Transactions";
 import { Web3 } from "./Web3";
-import AssetBalance from "./AssetBalance";
 import Web3ConnectionRow from "./Web3ConnectionRow";
 
 export const FireblockNCWExampleActions: React.FC = () => {
