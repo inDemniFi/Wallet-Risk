@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from "react";
-import { ApiService, ITransactionDetails } from "./ApiService";
+import React from "react";
+import { useAppStore } from "../AppStore";
+import { Card, ICardAction } from "./ui/Card";
 import { assetBalancesConfig } from "./assetBalancesConfig.tsx";
 
 interface AssetBalancesProps {
