@@ -7,6 +7,7 @@ import { Transactions } from "./Transactions";
 import { Web3 } from "./Web3";
 import AssetList from "./AssetList";
 import AssetBalance from "./AssetBalance";
+import Web3ConnectionRow from './Web3ConnectionRow'
 
 export const FireblockNCWExampleActions: React.FC = () => {
   return (
@@ -18,6 +19,7 @@ export const FireblockNCWExampleActions: React.FC = () => {
       <Web3 />
       <AssetList />
       <AssetBalance />
+      <Web3ConnectionRow />
     </>
   );
 };
