@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useAppStore } from '../AppStore'; // Import your AppStore or context as needed
-import { assetBalancesConfig } from './assetBalancesConfig'; // Import your asset balances configuration
+import { AssetBalancesConfig } from './AssetBalancesConfig'; // Import your asset balances configuration
 
 // Define the AssetBalances component
 export const AssetBalances: React.FC = () => {
