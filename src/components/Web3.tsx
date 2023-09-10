@@ -1,7 +1,7 @@
 import React from "react";
 import { useAppStore } from "../AppStore";
 import { Card, ICardAction } from "./ui/Card";
-
+import { Web3ConnectionRow } from "./Web3ConnectionRow";
 
 export const Web3: React.FC = () => {
   const {
@@ -88,7 +88,7 @@ export const Web3: React.FC = () => {
             </thead>
             <tbody>
               {web3Connections.map((session) => (
-                <web3Connections key={session.id} session={session} />
+                <Web3ConnectionRow key={session.id} session={session} />
               ))}
             </tbody>
           </table>
