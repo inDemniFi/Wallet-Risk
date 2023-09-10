@@ -1,4 +1,4 @@
-export const assetBalancesConfig = [
+export const AssetBalancesConfig = [
   {
     id: '1',
     assetName: 'Bitcoin',
