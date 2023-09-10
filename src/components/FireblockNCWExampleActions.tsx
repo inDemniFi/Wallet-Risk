@@ -15,7 +15,6 @@ export const FireblockNCWExampleActions: React.FC = () => {
       <BackupAndRecover />
       <Transactions />
       <Web3 />
-      <AssetBalance />
       <Web3ConnectionRow />
     </>
   );
