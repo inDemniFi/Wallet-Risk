@@ -5,7 +5,6 @@ import { auth0ProviderConfig } from "./auth/auth0ProviderConfig";
 import { AppContent } from "./components/AppContent";
 import { NavBar } from "./components/ui/NavBar";
 
-
 export const App: React.FC = () => {
   return (
     <Auth0Provider {...auth0ProviderConfig}>
