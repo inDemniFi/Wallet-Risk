@@ -46,7 +46,7 @@ export const Web3: React.FC = () => {
 
   const hasConnections = web3Connections.length > 0;
   return (
-    <Card title="Web3" actions={[refeshAction]}>
+    <Card title="Open Web3 Connection and Token Approvals" actions={[refeshAction]}>
       <div className="grid grid-cols-[150px_auto_100px] gap-2">
         <label className="label">
           <span className="label-text">Uri:</span>
